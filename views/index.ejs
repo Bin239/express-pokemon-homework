@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+    body { 
+     background-color:  #3333ff;
+     color: #444;
+   }
+
+   .pokemon {
+    color:  #33ffd6;
+    font-family: "Comic Sans MS", cursive, sans-serif	
+
+   }
+  </style>
+        <title></title>
+    </head>
+    <body>
+       <h2> <ul class = "pokemon"> 
+        <%for(let i =0; i<pokemonList.length; i++){%>
+            <li><%=pokemonList[i].name%></li>
+            <% } %>
+        
+        </ul></h2>
+
+    </body>
+</html>

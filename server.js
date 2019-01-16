@@ -4,8 +4,15 @@ const app = express();
 
 const Pokemon = require("./model/pokemon");
 
+// app.get("/pokemon", (req, res) => {
+//     res.send(Pokemon);
+// });
+
 app.get("/pokemon", (req, res) => {
-    res.send(Pokemon);
+    res.render("index.ejs", {
+        pokemonList: Pokemon
+    });
+
 });
 
 
