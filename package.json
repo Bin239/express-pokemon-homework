@@ -20,6 +20,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
     "supertest": "^3.3.0"
   },
   "directories": {
