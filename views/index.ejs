@@ -3,7 +3,7 @@
     <head>
     <style>
     body { 
-     background-color:  #3333ff;
+     background-color: purple;
      color: #444;
    }
 
@@ -16,12 +16,21 @@
         <title></title>
     </head>
     <body>
-       <h2> <ul class = "pokemon"> 
+      <ul class = "pokemon"> 
         <%for(let i =0; i<pokemonList.length; i++){%>
-            <li><%=pokemonList[i].name%></li>
-            <% } %>
+          <li> <a href = "/pokemon/<%i%>"><%=pokemonList[i].name%></a></li>
+            
+            
+        <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+        <form action="/pokemon/<%=i%>/edit" method="GET">
+            <button type="submit">Edit</button>
+        </form>
+
+        <% } %>
         
-        </ul></h2>
+        </ul>
 
     </body>
 </html>
