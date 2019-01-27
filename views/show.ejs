@@ -4,9 +4,11 @@
         <title></title>
     </head>
     <body>
+    <h2>Your Pokemon</h2>
         <h1><%= pokemonList.name %></h1><br>
-        <img src="<%= pokemon.img %>"> <br>
-        <a href = "/pokemon/<%=id%>/edit">Edit Pokemon </a>
-
+        <h2 class='pokemon'><%= pokemonList.name %> <a href="/pokemon"> <button type="submit">Back to Home</button></a> 
+        <form action="/pokemon/<%= id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete this Pokemon</button></form></h2> <br>
+    <img src="<%= pokemon.img %>">
     </body>
 </html>
